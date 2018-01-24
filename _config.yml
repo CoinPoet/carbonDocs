@@ -1,0 +1,34 @@
+title: CarbonDocs — Create rich business documents with siple, easy, markup language.
+description: > # this means to ignore newlines until "baseurl:"
+  Create rich business documents with siple, easy, markup language.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""
+app_base_url: ""
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.txt
+include: 
+  - _headers
+sass:
+  sass_dir:  _scss
+  style: compressed
+pages:
+  index
+  features
+plugins:
+  - jekyll-autoprefixer
+
+navigation:
+  - title: features
+    url: /features
+  - title: purchase
+    url: /purchase
+  - title: tour
+    url: /tour
+  - title: discuss
+    url: /discuss
+

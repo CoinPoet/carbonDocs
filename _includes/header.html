@@ -1,0 +1,37 @@
+<header class="page-header">
+    <div class="container">
+        <div class="row">
+            {% if page.id == "home" %} 
+                {% assign index = "#" %} 
+            {% else %} 
+                {% assign index = "/index" %} 
+            {% endif %}
+            <div class="col-lg-8 col-md-4 col-12">
+                <a href="{{ index }}">
+                <img src="assets/images/logo.svg" alt="carbonDocs" class="img-fluid visible-md-up">
+                <img src="assets/images/logo-mobile.svg" alt="carbonDocs" class="visible-sm-down" width="80">
+            </a>
+            </div>
+            
+            <div class="col-lg-13 offset-lg-1 offset-md-5 col-md-15 col-24">
+                <input type="checkbox" id="nav-toggle" role="button">
+                <label for="nav-toggle" class="nav-icon"></label>
+                <nav class="nav">
+                    <ul class="navbar-nav ml-auto">
+                        {% for navigation in site.navigation %}
+                        {% if navigation.title == page.id %} 
+                            {% assign current = 'active' %} 
+                        {% else %} 
+                            {% assign current = null %} 
+                        {% endif %}
+                        <li >
+                            <a class="nav-link {{ current }}" href="{{ navigation.url }}">{{ navigation.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>

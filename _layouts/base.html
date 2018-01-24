@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+    {% include head.html %}
+
+</head>
+
+<body class="{{ page.id | remove:'/' }} {{ page.layout | remove:'/' }}">
+    {% include header.html %}
+    {{content}} 
+
+    {% include footer.html %}
+
+</body>
+
+<!-- <script src="//code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="/scripts/modernizr-custom.js"></script>
+<script src="/scripts/jquery.inputmask.bundle.js"></script>
+<script src="/scripts/main.js"></script> -->
+
+</html>

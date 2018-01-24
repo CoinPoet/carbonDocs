@@ -1,0 +1,116 @@
+// Layout
+//
+// Styles for managing the structural hierarchy of the site.
+body:after {
+    display: none;
+}
+
+@media only screen and (max-width: 524px) {
+    body:after {
+        content: 'mobile';
+    }
+}
+
+@media only screen and (min-width: 525px) {
+    body:after {
+        content: 'tablet';
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    body:after {
+        content: 'desktop';
+    }
+}
+
+.footer {
+    margin-bottom: 150px;
+    padding-top: 10px;
+    border-top: 1px solid #eaeaea;
+    h6 {
+        margin-top: 55px;
+        margin-bottom: 25px;
+    }
+    .logo {
+        margin-top: 55px;
+    }
+}
+
+.header-section {
+    background-color: #222835;
+    background-repeat: no-repeat;
+    background-position: top right;
+    color: $white;
+    position: relative;
+    // h1 {
+    //   font-size: 30px;
+    // }
+    h1,
+    h2 {
+        color: $white;
+    }
+    span {
+        color: rgba($white, 0.8);
+    }
+    .btn + .btn {
+        margin-left: 13px;
+    }
+    a {
+        color: $white;
+    }
+    p.lead {
+        opacity: 0.65;
+        font-size: 15px;
+        color: #FFFFFF;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+.header-wrapper {
+    padding: 88px 0;
+    height: 700px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.full-bleed-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: $dark-blue-color;
+    .full-bleed-object {
+        width: 1440px;
+        object-fit: cover;
+        float: right;
+    }
+}
+
+body.home {
+    .header-section {
+        background-image: none;
+    }
+}
+
+body.platform {
+    .header-section {
+        padding-bottom: 0;
+        background-image: none;
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+body.solutions {
+    .header-section {
+        background-color: #1E232F;
+        h1 {
+            margin-bottom: 10px;
+        }
+    }
+}

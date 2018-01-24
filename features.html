@@ -1,0 +1,64 @@
+--- 
+id: features 
+layout: base 
+title: Dynamically create PDF documents with familiar markup and tools that integrate with Visual Studio & ASP.NET
+features:
+- title: Use HTML & CSS to Create PDF files
+  image: assets/images/image1.png
+  subtitle: If you know HTML & CSS then you already know how to use CarbonDocs Markup Language (CDML). You write HTML and the CarbonDocs will act like a super browser and automatically layout the text and images in your document into multiple pages. Not only does this make CarbonDocs easy to use for web developers, the power of HTML and CSS allows you to create perfect and flexible PDF documents for your business.
+- title: Dynamic Templates using C#
+  image: assets/images/image2.png
+  subtitle: CarbonDocs also supports using C# templates to dynamically modify the document. Use syntax nearly identical to an ASP.NET MVC view to make your PDF documents dynamic based on data or other conditions. 
+- title: ASP.NET Integration
+  image: assets/images/image3.png
+  subtitle: In addition to being entirely managed code, CarbonDocs includes an HttpHandler that makes it a breeze to add dynamically generated PDF documents to your ASP.NET applications. Just xcopy the CarbonDocs assemblies to your site and drop the .cdml files into your site and presto! Dynamically generated PDFs streaming to your site visitors. 
+- title: Fast, Really Fast
+  image: assets/images/image4.png
+  subtitle: We know that performance is important and that's why we held ourselves to a very high bar in this area. Our performance mission started with a thoughtful architecture that leverages multi-core CPUs as much as possible, and the code was extensively profiled and optimized. We run strict regression tests to make sure it stays fast. 
+- title: Visual Studio Integration
+  image: assets/images/image5.png
+  subtitle: CarbonDocs installs custom templates for editing inside of Visual Studio so you can create your CDML documents right inside of Visual Studio with the help of intellsense and your familiar environment. CarbonDocs also has an API that .NET developers will find familiar so you can programatically manipulate the documents inside of your WPF, ASP.NET, or Windows Forms applications.
+- title: Charts
+  image: assets/images/image6.png
+  subtitle: "The <chart> tag lets you embed beautiful charts directly into your documents. Since the charts are rendered directly to PDF in a native PDF vector format, they are not only visually stunning, they are much smaller than images, so the PDF will be tiny too."
+- title: Barcodes
+  image: assets/images/image7.png
+  subtitle: Using the CDML barcode tag lets you embed high quality vector drawn barcodes directly into your documents. 
+---
+<div class="container">
+    <section class="description-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-20 offset-md-1">
+                    <h2 class="text-white">{{ page.title }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="container-fluid">
+            {% for feature in page.features %}
+            <div class="features-row row">
+                <div class="col-lg-10 offset-lg-1 col-md-16 offset-md-4">
+                    <img src="{{ feature.image }}" alt="{{ feature.title }}" >
+                </div>
+                <div class="col-lg-11 offset-lg-1 col-md-16 offset-md-4">
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.subtitle }} </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+     <section>
+        <ul class="main-links">
+            <li class="">
+                <div class="row">
+                    <div class="offset-md-1">
+                        <a href="/">Try carbonDocs free for 30 days</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
